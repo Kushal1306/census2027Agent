@@ -1,5 +1,5 @@
-import { Navigation, Hero, Features, StatsShowcase, ParticipationCTA, Footer } from './components'
-
+import { Navigation, Hero} from './components'
+// import { Features, StatsShowcase, ParticipationCTA, Footer } from './components'
 function App() {
   return (
     <div className="bg-white min-h-screen">

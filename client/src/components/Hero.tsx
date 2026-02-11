@@ -157,10 +157,9 @@ const Hero: React.FC = () => {
             >
               <h3 className="text-xs sm:text-sm font-bold text-black leading-tight">
                 What if we deploy an{' '}
-                <span className="bg-[#ff6b6b] px-1 py-0.5">voice agent</span>
-                {' '}for{' '}
-                <span className="bg-[#4ecdc4] px-1 py-0.5">census survey</span>
-                {' '}2027?
+                <span className="bg-[#ff6b6b] px-1 py-0.5">AI voice agent</span>
+                {' '}for the{' '}
+                <span className="bg-[#4ecdc4] px-1 py-0.5">2027 census survey</span>?
               </h3>
             </motion.div>
 

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Button from './ui/Button'
 import GeometricShapes from './ui/GeometricShapes'
-import { ArrowRight, X } from 'lucide-react'
+import { X } from 'lucide-react'
 
 const DISPATCH_API_BASE = import.meta.env.VITE_DISPATCH_API_URL || 'http://localhost:3001'
 
@@ -103,10 +103,11 @@ const Hero: React.FC = () => {
       />
       <GeometricShapes
         variant="circle"
-        size={250}
+        size={150}
         color="#1a1a1a"
-        position={{ bottom: '-80px', left: '-80px' }}
+        position={{ bottom: '-60px', left: '-60px' }}
         animate={false}
+        className="hidden lg:block"
       />
       <GeometricShapes
         variant="line"
@@ -132,8 +133,8 @@ const Hero: React.FC = () => {
               transition={{ duration: 0.8 }}
               className="space-y-2"
             >
-              <h1 className="text-7xl sm:text-8xl lg:text-9xl font-black text-transparent" style={{
-                WebkitTextStroke: '3px #1a1a1a',
+              <h1 className="text-6xl sm:text-8xl lg:text-8xl font-black text-transparent" style={{
+                WebkitTextStroke: '2px #1a1a1a',
                 letterSpacing: '-0.02em',
               }}>
                 CENSUS 2027
@@ -149,16 +150,16 @@ const Hero: React.FC = () => {
             {/* Yellow Box with Tagline - Neobrutalist Style */}
             <motion.div
               variants={itemVariants}
-              className="relative bg-neo-accent border-[5px] border-black p-5 sm:p-6 max-w-xl"
+              className="relative bg-neo-accent border-[3px] border-black p-2 sm:p-3 max-w-xs"
               style={{
-                boxShadow: '8px 8px 0px 0px #000000'
+                boxShadow: '4px 4px 0px 0px #000000'
               }}
             >
-              <h3 className="text-base sm:text-xl font-bold text-black leading-tight">
+              <h3 className="text-xs sm:text-sm font-bold text-black leading-tight">
                 What if we deploy an{' '}
-                <span className="bg-[#ff6b6b] px-2 py-1">ai agent</span>
-                {' '}to take{' '}
-                <span className="bg-[#4ecdc4] px-2 py-1">census survey</span>
+                <span className="bg-[#ff6b6b] px-1 py-0.5">voice agent</span>
+                {' '}for{' '}
+                <span className="bg-[#4ecdc4] px-1 py-0.5">census survey</span>
                 {' '}2027?
               </h3>
             </motion.div>
@@ -166,17 +167,11 @@ const Hero: React.FC = () => {
             {/* CTA Buttons */}
             <motion.div
               variants={itemVariants}
-              className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto"
+              className="flex flex-col sm:flex-row gap-4 w-auto"
             >
-              <Button variant="primary" size="lg" onClick={() => setShowSurveyModal(true)}>
+              <Button variant="primary" size="md" onClick={() => setShowSurveyModal(true)}>
                 Take Dummy Survey
               </Button>
-              <motion.button
-                whileHover={{ x: 10 }}
-                className="flex items-center gap-2 font-bold text-black border-3 border-black px-6 py-3 hover:bg-black hover:text-white transition-colors"
-              >
-                LEARN MORE <ArrowRight size={20} />
-              </motion.button>
             </motion.div>
 
             {/* Stats */}
@@ -185,7 +180,7 @@ const Hero: React.FC = () => {
               className="grid grid-cols-3 gap-8 pt-8 border-t-3 border-black"
             >
               {[
-                { number: '330M+', label: 'CITIZENS' },
+                { number: '1.3B+', label: 'CITIZENS' },
                 { number: '2027', label: 'YEAR' },
                 { number: '∞', label: 'IMPACT' },
               ].map((stat, index) => (
@@ -300,7 +295,7 @@ const Hero: React.FC = () => {
       </AnimatePresence>
 
       {/* Scroll Indicator */}
-      <motion.div
+      {/* <motion.div
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
         className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
@@ -315,7 +310,7 @@ const Hero: React.FC = () => {
             />
           </div>
         </div>
-      </motion.div>
+      </motion.div> */}
     </section>
   )
 }

@@ -5,10 +5,10 @@ function App() {
     <div className="bg-white min-h-screen">
       <Navigation />
       <Hero />
-      <Features />
+      {/* <Features />
       <StatsShowcase />
       <ParticipationCTA />
-      <Footer />
+      <Footer /> */}
     </div>
   )
 }

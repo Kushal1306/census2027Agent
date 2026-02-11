@@ -7,6 +7,7 @@ interface GeometricShapesProps {
   color?: string
   position?: { top?: string; right?: string; bottom?: string; left?: string }
   animate?: boolean
+  className?: string
 }
 
 const GeometricShapes: React.FC<GeometricShapesProps> = ({
@@ -15,8 +16,9 @@ const GeometricShapes: React.FC<GeometricShapesProps> = ({
   color = '#ffed4e',
   position = {},
   animate = true,
+  className = '',
 }) => {
-  const baseClass = 'absolute'
+  const baseClass = `absolute ${className}`
 
   const shapeVariants = {
     hidden: { opacity: 0, scale: 0 },

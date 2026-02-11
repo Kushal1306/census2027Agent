@@ -169,7 +169,7 @@ const Hero: React.FC = () => {
               className="flex flex-col sm:flex-row gap-4 w-auto"
             >
               <Button variant="primary" size="md" onClick={() => setShowSurveyModal(true)}>
-                Take Dummy Survey
+                Take a Dummy Survey
               </Button>
             </motion.div>
 
